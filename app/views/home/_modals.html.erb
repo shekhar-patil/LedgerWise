@@ -1,0 +1,12 @@
+<button class="btn btn-secondary acct-btn" data-target="#withModal" data-toggle="modal" type="button">
+  <i class="black fa fa-arrow-circle-down" aria-hidden="true"></i>
+  <span class="grey thin">Withdraw</span>
+</button>
+<button class="btn btn-secondary acct-btn" data-target="#depModal" data-toggle="modal" type="button">
+  <i class="black fa fa-arrow-circle-up" aria-hidden="true"></i>
+  <span class="grey thin">Deposit</span>
+</button>
+<div class="modals">
+  <%= render 'deposit' %>
+  <%= render 'withdrawal' %>
+</div>

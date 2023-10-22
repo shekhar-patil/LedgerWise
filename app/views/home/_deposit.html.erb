@@ -1,0 +1,56 @@
+<div id="depModal" class="modal fade" aria-hidden="true" aria-labelledby="depModalLabel" role="dialog" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" aria-label="Close" data-dismiss="modal" type="button">
+          <span aria-hidden="true">x</span>
+        </button>
+        <h4 id="myModalLabel" class="modal-title thin">New Deposit</h4>
+      </div>
+      <div class="modal-body thin">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Amount</label>
+            <form class="form-inline">
+              <div class="form-group">
+                <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                <div class="input-group">
+                  <div class="input-group-addon">$</div>
+                  <input id="exampleInputAmount" class="form-control grey" placeholder="Amount" type="text">
+                  <div class="input-group-addon">.00</div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <fieldset class="form-group">
+            <legend>Medium of Exchange</legend>
+            <div class="form-check">
+              <label class="form-check-label grey">
+                <input id="optionsRadios1" class="form-check-input" checked="checked" name="optionsRadios" type="radio" value="option1">
+                Check
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label grey">
+                <input id="optionsRadios2" class="form-check-input" name="optionsRadios" type="radio" value="option2">
+                Money Order
+              </label>
+            </div>
+          </fieldset>
+          <div class="form-group">
+            <legend>Upload Picture</legend>
+            <input class="filestyle file-input grey" data-icon="false" type="file">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer thin">
+        <button class="btn btn-secondary" data-dismiss="modal" type="button">
+          <span class="thin">Cancel</span>
+        </button>
+        <button class="btn btn-primary transaction-submit" data-dismiss="modal" type="button">
+          <span class="thin">Submit</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,9 @@ import { application } from "controllers/application"
 import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
 eagerLoadControllersFrom("controllers", application)
 
-// Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
-// import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
-// lazyLoadControllersFrom("controllers", application)
+$(document).ready(function() {
+  $('.transaction-submit').click(function(event){
+    alert('Your transaction has been submitted!');
+    event.preventDefault(); // Prevent link from following its href
+  });
+});

@@ -1,1 +1,38 @@
-<%= @json_data %>
+<%= @ledger_data = @json_data %>
+
+
+    <h1 class="title black thin">Investing Account</h1>
+    <div class="content thin">
+      <div class="balance black">
+        <div class="balance-title">
+          Balance<br>
+        </div>
+        <div class="balance-info">
+          <b>$<%= @ledger_data.first['balance'] %></b>
+          <%= render 'modals' %>
+        </div>
+      </div>
+      <div class="table-title grey">Transaction History</div>
+      <table>
+        <thead>
+          <tr class="grey border">
+            <th>Date</th>
+            <th>Transaction</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @ledger_data.each do |entry| %>
+            <tr class="grey border">
+              <td><%= entry['formatted_date'] %></td>
+              <td class="black"><%= entry['type'] %></td>
+              <td><%= entry['formatted_description'] %></td>
+              <td class="black"><%= entry['amount'] %></td>
+              <td class="black"><b>$<%= entry['balance'] %></b></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
