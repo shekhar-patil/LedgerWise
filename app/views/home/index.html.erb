@@ -23,9 +23,9 @@
     <tbody>
       <% @ledger_data.each do |entry| %>
         <tr class="grey border">
-          <td><%= entry['formatted_date'] %></td>
+          <td><%= format_date(entry['date']) %></td>
           <td class="black"><%= entry['type'] %></td>
-          <td><%= entry['formatted_description'] %></td>
+          <td><%= description(entry) %></td>
           <td class="black"><%= entry['amount'] %></td>
           <td class="black"><b>$<%= entry['balance'] %></b></td>
         </tr>

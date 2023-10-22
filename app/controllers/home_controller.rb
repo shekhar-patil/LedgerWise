@@ -2,6 +2,6 @@ class HomeController < ApplicationController
   include JsonFormatter
 
   def index
-    @ledger_data = raw_transactions
+    @ledger_data = ledger_transactions
   end
 end
